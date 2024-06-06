@@ -17,6 +17,9 @@ jobs:
       - name: 🛎️ Checkout
         uses: actions/checkout@v4
 
+      - name: 📦 Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: 🐧 Use Node.js v20.x
         uses: actions/setup-node@v4
         with:
