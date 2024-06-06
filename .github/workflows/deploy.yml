@@ -1,0 +1,42 @@
+name: Github Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+  pages: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v4
+
+      - name: 🐧 Use Node.js v20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: v20.x
+          cache: "pnpm"
+
+      - run: corepack enable
+      - run: pnpm install
+      - run: pnpm build
+      - run: pnpm search:build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: "./build"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
