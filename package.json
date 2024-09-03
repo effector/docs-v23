@@ -45,7 +45,7 @@
     "effector": "^23.2.0",
     "html-escaper": "^3.0.3",
     "nanoid": "^4.0.2",
-    "pagefind": "^1.0.4",
+    "pagefind": "^1.1.1",
     "preact": "^10.18.1",
     "rehype-autolink-headings": "^7.1.0",
     "remark-breaks": "^4.0.0",
