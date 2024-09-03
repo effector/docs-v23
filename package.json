@@ -29,7 +29,7 @@
     "@codesandbox/sandpack-react": "^2.10.0",
     "@effector/remark-heading-id": "^2.0.2",
     "@octokit/rest": "^19.0.13",
-    "@pagefind/default-ui": "^1.0.4",
+    "@pagefind/default-ui": "^1.1.1",
     "@tailwindcss/typography": "^0.5.10",
     "@types/html-escaper": "^3.0.2",
     "@types/mdast": "^4.0.3",
